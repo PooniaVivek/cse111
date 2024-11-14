@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <style>
+        div{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            
+        }
+
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+        div img{
+            margin: 5px;
+            cursor: pointer;
+            transition: 400ms;
+            box-shadow: 40px;    
+        }
+
+        div img:hover{
+            transform: scale(1.07);
+            margin-left: 1.5rem;
+            margin-right: 1.5rem;
+            transition-duration: 0.3s ;
+        }
+
+        @font-face {
+            font-family: Bona;
+            src: url(Fonts/BonaNovaSC-Bold.ttf);
+        }
+
+        h1{
+            font-size: 50px;
+            text-align: center;
+            font-family: Bona;
+            color: rgb(20, 129, 197);
+        }
+
+        p{
+            text-align: center;
+            color: rgb(28, 161, 206);
+            font-size: 50px;
+            margin-top: -80px;
+        }
+
+        .para1{
+            text-align: center;
+            font-size: larger;
+            margin-top: -35px;
+        }
+
+        .para2{
+            display:inline-table;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;    
+            margin-top: 30px;
+            transition: transform(00.3s);
+        }
+        .para2 a{
+            text-decoration: none;
+        }
+        .para2 :hover{
+            transform: scale(1.5);
+        }
+        .bookButton{
+            width: 6.5rem;
+            padding: 0.5rem;
+            border: 2px solid transparent;
+            background-color: rgb(20, 129, 197);
+            transition: all linear 0.3s;
+            
+        }
+        .bookButton a{
+            color: white;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all linear 0.3s;
+        }
+        .bookButton:hover{
+            background-color: transparent;
+            border-color: rgb(20, 129, 197);
+        }
+        .bookButton:hover .bookLink{
+            color: rgb(20, 129, 197);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="https://media.istockphoto.com/id/510444123/photo/lal-qila-red-fort-in-delhi.jpg?s=612x612&w=0&k=20&c=t4Dqx-kpGelh2qpyG2Wg2UKWirdC5pCWXYFIIICg6YA=" alt="Red Fort" height="300" width="400">
+        <img src="https://images.pexels.com/photos/924844/pexels-photo-924844.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Odisha" height="300" width="400">
+        <img src="https://media.istockphoto.com/id/910430170/photo/tawang-arunachal-pradesh.jpg?s=612x612&w=0&k=20&c=MKKYsHH_6JRMYROO2bHIsQAW9XoSnl-9nkRGOFgAg0M=" alt="Utter Pradesh" height="300" width="400">
+    </div>
+    <h1>Travelling around India</h1>
+    <p>______</p>
+
+    <section class="para1">
+        <p1>All the necessary information for your trip around India is here.</p1>
+    </section>
+
+    <div class="para2">
+        <p2><a href="https://www.whatsapp.com/"><img src="https://img.icons8.com/?size=80&id=d5ntEsf0JRhM&format=png" alt="call" height="30px" width="30px"></a></p2>
+        <p2><a href="https://instagram.com"><img src="https://img.icons8.com/?size=80&id=NdqqxfTuEK6C&format=png" alt="instagram" height="30px" width="30px"></a></p2>
+        <p2><a href="https://facebook.com"><img src="https://img.icons8.com/?size=48&id=118497&format=png" alt="facebook" height="30px" width="30px"></a></p2>
+        <p2><a href="https://youtube.com"><img src="https://img.icons8.com/?size=48&id=19318&format=png" alt="youtube" height="30px" width="30px"></a></p2>
+        <p2><a href="https://twitter.com"><img src="https://img.icons8.com/?size=60&id=dfe6xOTOt2vY&format=png" alt="Twitter" height= "30px" width="30px"></a></p2>
+        <p2><a href="https://www.threads.net/login/?hl=en"><img src="https://ouch-cdn2.icons8.com/QgYTz9zBv_EYWgYIw4YpGIiwTqw0t1pEAIMD1-WlefU/rs:fit:368:368/extend:false/wm:1:re:0:0:0.8/wmid:ouch2/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvNjMw/LzJhOWFlNmEwLWZj/MDEtNDQ3Zi1iZmJl/LTJkNjIzMGUyMTM5/NS5zdmc.png" alt="Threads" height="px" width="30px"></a></p2>
+    </div>
+    <br>
+    <button class="bookButton">
+        <a class="bookLink" href="">Book Now →</a>
+    </button>
+
+</body>
+</html>

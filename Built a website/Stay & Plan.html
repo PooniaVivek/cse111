@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stay & Plan</title>
+    <style>
+
+        .header {
+            background-color: #285c98;
+            color: #fff;
+            text-align: center;
+            padding: 3rem;
+            margin-left: -10px;
+            margin-right: -10px;
+            margin-top: -10px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .header p {
+            margin-top: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+
+        .label {
+            font-weight:bolder;
+            width: 100%;
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background-position: center;
+            color: #ffffff;
+        }
+
+       
+        .booking-form {
+            width: 90%;
+            max-width: 500px;
+            background-color: #fbfcff;
+            padding: 20px;
+            margin-top: 30px;
+            margin-bottom: 65px;
+            border-radius: 10px;
+            box-shadow: 10px 40px 80 px rgba(0, 0, 0, 0.1);
+        }
+
+        .booking-form label { 
+            font-weight: 600; 
+            color: #000000; 
+            margin-bottom: 5px; 
+        }
+
+        .booking-form input{
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        
+        .booking-form select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .booking-form button {
+            width: 100%;
+            padding: 12px;
+            background-color: #0066cc;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            font-size: large;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    
+    <section class="header">
+        <h1>Find your next stay</h1>
+        <p>Search deals on hotels, homes, and much more...</p>
+    </section>
+
+    <div class="label">
+        <div class="booking-form">
+           
+            <label>Enter Destination</label>
+            <select type="destination" required> </select>
+
+            <label type="date">Check-in date</label>
+            <input type="date" required>
+
+            <label type="date">Check-out date</label>
+            <input type="date" required>
+
+            <label type="email">Room for peoples</label>
+            <input type="number" id="tickets"  min="1" max="10" required>
+
+            <button type="submit">Book Now</button>
+           
+        </div>
+    </div
+
+</body>
+</html>

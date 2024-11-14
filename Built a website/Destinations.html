@@ -1,0 +1,793 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Destinations</title>
+        <style>
+        @font-face {
+        font-family: Bona;
+        src: url(Fonts/BonaNovaSC-Bold.ttf);
+    }
+    body{
+        display: flex;
+        justify-content: center;
+    }
+    .destinations {
+        width: 80%;
+        text-align: center;
+        align-content: center;
+    }
+
+    .destinations h1 {
+        font-size: 55px;
+        margin-bottom: 50px;
+        color: #0f0d0d;
+        font-family: Bona;
+
+    }
+
+    .destination-cards {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+
+    .card {
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        margin: 20px;
+        max-width: 300px;
+        transition: transform 0.3s;
+        width: 300px;
+        height: 20rem;
+    }
+
+    .card:hover {
+        transform: scale(1.15);
+    }
+
+    .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .card h4 {
+        font-size: 24px;
+        margin: 15px 0;
+    }
+
+    .card p{
+        padding: 0 15px 0px;
+    }
+    .destination-cards .card div::after {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        font-size: 1.2em;
+        color: #333;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 10px;
+        text-align: center;
+    }
+    .destination-cards .card:nth-child(1) div {
+        background-image: url(https://images.pexels.com/photos/1603650/pexels-photo-1603650.jpeg?auto=compress&cs=tinysrgb&w=600);
+        background-size: cover;
+        height: 70%;
+    }
+   
+
+    .destination-cards .card:nth-child(2) div {
+        background-image: url(https://media.istockphoto.com/id/510444123/photo/lal-qila-red-fort-in-delhi.jpg?s=612x612&w=0&k=20&c=t4Dqx-kpGelh2qpyG2Wg2UKWirdC5pCWXYFIIICg6YA=);
+        background-size: cover;
+        height: 70%;
+    }
+    
+
+    .destination-cards .card:nth-child(3) div {
+        background-image: url(https://t3.ftcdn.net/jpg/00/79/56/72/240_F_79567261_moF0OxO74B2SiZ9ZtxYgA5klam46qzdS.jpg);
+        background-size: cover;
+        height: 70%;
+    }
+   
+
+    .destination-cards .card:nth-child(4) div {
+        background-image: url(https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&w=600);
+        background-size: cover;
+        height: 70%;
+    }
+    .destination-cards .card:nth-child(4):hover div {
+        background-image: none;
+    }
+    .destination-cards .card:nth-child(4):hover div::after {
+        content: 'Alleppey (backwaters), Munnar (tea plantations), Thekkady (wildlife sanctuary), Kochi (cultural landmarks), Kumarakom (bird sanctuary);';
+    }
+
+    .destination-cards .card:nth-child(5) div {
+        background-image: url(https://t4.ftcdn.net/jpg/06/39/42/79/240_F_639427941_h4sHH7Z1cmVrqY0bTY9TYBqbhWhmWfOP.jpg);
+        background-size: cover;
+        height: 70%;
+    }
+    .destination-cards .card:nth-child(5):hover div {
+        background-image: none;
+    }
+    .destination-cards .card:nth-child(5):hover div::after {
+        content: 'Jaipur, Udaipur, Jaisalmer, Jodhpur, Pushkar';
+    }
+
+    .destination-cards .card:nth-child(6) div {
+        background-image: url(https://media.istockphoto.com/id/859006308/photo/paragliding-with-breathtaking-mountain-panarama-bavaria.jpg?s=612x612&w=0&k=20&c=tjuFgolAAd4MADc9jJYPzNpQ48yX_4jPFwYokA7M21M=);
+        background-size: cover;
+        height: 70%;
+    }
+    .destination-cards .card:nth-child(6):hover div {
+        background-image: none;
+    }
+    .destination-cards .card:nth-child(6):hover div::after {
+        content: 'Shimla (hill station), Manali (adventure sports), Dharamshala (Tibetan culture), Kullu (festival), Spiti Valley (desert mountains)';
+    }
+
+    .destination-cards .card:nth-child(7) div {
+        background-image: url(https://images.pexels.com/photos/3848200/pexels-photo-3848200.jpeg?auto=compress&cs=tinysrgb&w=600);
+        background-size: cover;
+        height: 70%;
+    }
+    .destination-cards .card:nth-child(7):hover div {
+        background-image: none;
+    }
+    .destination-cards .card:nth-child(7):hover div::after {
+        content: 'Kaziranga (rhinos), Majuli (river island), Sivasagar (Ahom monuments), Guwahati (Kamakhya temple), Manas (national park)';
+    }
+
+    .destination-cards .card:nth-child(8) div {
+        background-image: url(https://images.pexels.com/photos/457882/pexels-photo-457882.jpeg);
+        background-size: cover;
+        height: 70%;
+    }
+    .destination-cards .card:nth-child(8):hover div {
+        background-image: none;
+    }
+    .destination-cards .card:nth-child(8):hover div::after {
+        content: 'Panaji (Portuguese architecture), Old Goa (churches), Baga Beach (nightlife), Palolem (beach), Dudhsagar (falls)';
+    }
+
+    .destination-cards .card:nth-child(9) div {
+        background-image: url(https://images.pexels.com/photos/12656931/pexels-photo-12656931.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+        background-size: cover;
+        height: 70%;
+    }
+    .destination-cards .card:nth-child(9):hover div {
+        background-image: none;
+    }
+    .destination-cards .card:nth-child(9):hover div::after {
+        content: 'Amritsar (Golden Temple), Chandigarh (Rock Garden), Patiala (forts), Jalandhar (Devi Talab Mandir), Ludhiana (textiles';
+    }
+
+    .destination-cards .card:nth-child(10) div {
+        background-image: url(https://images.pexels.com/photos/924844/pexels-photo-924844.jpeg?auto=compress&cs=tinysrgb&w=600);
+        background-size: cover;
+        height: 70%;
+    }
+    .destination-cards .card:nth-child(10):hover div {
+        background-image: none;
+    }
+    .destination-cards .card:nth-child(10):hover div::after {
+        content: 'Dehradun (valleys), Nainital (lakes), Haridwar (Ganga Aarti), Mussoorie (hill station), Rishikesh (rafting)';
+    }
+
+    .destination-cards .card:nth-child(11) div {
+        background-image: url(https://backiee.com/static/wallpapers/1000x563/328027.jpg);
+        background-size: cover;
+        height: 70%;
+    }
+    .destination-cards .card:nth-child(11):hover div {
+        background-image: none;
+    }
+    .destination-cards .card:nth-child(11):hover div::after {
+        content: 'Kolkata (Victoria Memorial), Darjeeling (tea gardens), Sundarbans (mangroves), Kalimpong (scenic), Murshidabad (historical sites)';
+    }
+
+    .destination-cards .card:nth-child(12) div {
+        background-image: url(https://t3.ftcdn.net/jpg/02/86/24/50/240_F_286245044_5HiKIKPf9Mj1dz7T6Byd3YlNiiRSyHht.jpg);
+        background-size: cover;
+        height: 70%;
+    }
+    .destination-cards .card:nth-child(12):hover div {
+        background-image: none;
+    }
+    .destination-cards .card:nth-child(12):hover div::after {
+        content: 'Agartala (Ujjayanta Palace), Udaipur (Neermahal), Unakoti (rock carvings), Jampui Hills (scenic), Sepahijala (wildlife sanctuary)';
+    }
+
+    .destination-cards .card:nth-child(13) div {
+        background-image: url(https://t3.ftcdn.net/jpg/09/75/79/12/240_F_975791293_641DJlf7S6at8yzTYAwvEP3VG1LsYrwE.jpg);
+        background-size: cover;
+        height: 70%;
+    }
+    .destination-cards .card:nth-child(13):hover div {
+        background-image: none;
+    }
+    .destination-cards .card:nth-child(13):hover div::after {
+        content: 'Agra (Taj Mahal), Varanasi (ghats), Lucknow (Imambara), Allahabad (Sangam), Mathura (Krishna birthplace)';
+    }
+
+    .destination-cards .card:nth-child(14) div {
+        background-image: url(https://t3.ftcdn.net/jpg/08/73/76/92/240_F_873769250_15GYswgHfJjzrB9AJqjn0hCJCeYNMrKc.jpg);
+        background-size: cover;
+        height: 70%;
+    }
+    .destination-cards .card:nth-child(14):hover div {
+        background-image: none;
+    }
+    .destination-cards .card:nth-child(14):hover div::after {
+        content: 'Hyderabad (Charminar), Warangal (fort), Ramappa Temple (UNESCO), Nizamabad (fort), Medak (church)';
+    }
+
+    .destination-cards .card:nth-child(15) div {
+        background-image: url(https://images.unsplash.com/photo-1505832018823-50331d70d237);
+        background-size: cover;
+        height: 70%;
+    }
+    .destination-cards .card:nth-child(15):hover div {
+        background-image: none;
+    }
+    .destination-cards .card:nth-child(15):hover div::after {
+        content: 'Chennai (Marina Beach), Madurai (Meenakshi temple), Kanyakumari (sunrise), Ooty (hill station), Mahabalipuram (UNESCO site)';
+    }
+
+    .destination-cards .card:nth-child(16) div {
+        background-image: url(https://t3.ftcdn.net/jpg/05/87/87/12/240_F_587871298_Z1HVa7nk4uIaZtXoq4Dy75wGyZxW2m73.jpg);
+        background-size: cover;
+        height: 70%;
+    }
+    .destination-cards .card:nth-child(16):hover div {
+        background-image: none;
+    }
+    .destination-cards .card:nth-child(16):hover div::after {
+        content: 'Gangtok, Tsomgo Lake, Yuksom, Pelling, Nathula Pass';
+    }
+
+    .destination-cards .card:nth-child(17) div {
+        background-image: url(https://t3.ftcdn.net/jpg/03/62/77/20/240_F_362772024_23Is2sNIBbzH4an1ZkVFJGwpGsJzWE7P.jpg);
+        background-size: cover;
+        height: 70%;
+    }
+    .destination-cards .card:nth-child(17):hover div {
+        background-image: none;
+    }
+    .destination-cards .card:nth-child(17):hover div::after {
+        content: 'Puri, Konark, Bhubaneswar, Chilika Lake, Cuttack';
+    }
+
+    .destination-cards .card:nth-child(18) div {
+        background-image: url(https://t3.ftcdn.net/jpg/08/70/15/18/240_F_870151820_DUSwOEkophDeQRd57TTlYQy6oewbWjUG.jpg);
+        background-size: cover;
+        height: 70%;
+    }
+    .destination-cards .card:nth-child(18):hover div {
+        background-image: none;
+    }
+    .destination-cards .card:nth-child(18):hover div::after {
+        content: 'Aizawl, Champai, Lunglei, Phawngpui, Reiek';
+    }
+
+    .destination-cards .card:nth-child(19) div {
+        background-image: url(https://c1.wallpaperflare.com/preview/455/326/428/murudeshwar-arabian-sea-karnataka-gopuram.jpg);
+        background-size: cover;
+        height: 70%;
+    }
+    .destination-cards .card:nth-child(19):hover div {
+        background-image: none;
+    }
+    .destination-cards .card:nth-child(19):hover div::after {
+        content: 'Kurukshetra, Panipat, Sultanpur Bird Sanctuary, Pinjore Gardens, Morni Hills ';
+    }
+
+    .destination-cards .card:nth-child(20) div {
+        background-image: url(https://t3.ftcdn.net/jpg/10/24/47/94/240_F_1024479424_j4jw5Hp4h5RqCQcHbHvDetZSIybEdM6b.jpg);
+        background-size: cover;
+        height: 70%;
+    }
+    .destination-cards .card:nth-child(20):hover div {
+        background-image: none;
+    }
+    .destination-cards .card:nth-child(20):hover div::after {
+        content: 'Kohima, Dimapur, Mokokchung, Dzukou Valley, Mon';
+    }
+
+    .destination-cards .card:nth-child(21) div {
+        background-image: url(https://t4.ftcdn.net/jpg/04/78/10/45/240_F_478104522_4Xf8Ji3rsQeTBaMJWgoenFybjLzSQAcn.jpg);
+        background-size: cover;
+        height: 70%;
+    }
+    .destination-cards .card:nth-child(21):hover div {
+        background-image: none;
+    }
+    .destination-cards .card:nth-child(21):hover div::after {
+        content: 'Shillong, Cherrapunji, Mawlynnong, Dawki, Nongriat';
+    }
+
+    .destination-cards .card:nth-child(22) div {
+        background-image: url(https://t4.ftcdn.net/jpg/09/04/95/07/240_F_904950732_BRQHeJjByn02DJzh6XvjyxNQygSZib2k.jpg);
+        background-size: cover;
+        height: 70%;
+    }
+    .destination-cards .card:nth-child(22):hover div {
+        background-image: none;
+    }
+    .destination-cards .card:nth-child(22):hover div::after {
+        content: 'Imphal, Loktak Lake, Moreh, Keibul Lamjao National Park, Ukhrul';
+    }
+
+    .destination-cards .card:nth-child(23) div {
+        background-image: url(https://t3.ftcdn.net/jpg/04/20/43/36/240_F_420433699_2e6QXvfi6dpSLSpiSCud9pZzZf3aCYI4.jpg);
+        background-size: cover;
+        height: 70%;
+    }
+    .destination-cards .card:nth-child(23):hover div {
+        background-image: none;
+    }
+    .destination-cards .card:nth-child(23):hover div::after {
+        content: 'Mumbai, Ajanta and Ellora Caves, Mahabaleshwar, Lonavala, Shirdi';
+    }
+
+    .destination-cards .card:nth-child(24) div {
+        background-image: url(https://imgs.search.brave.com/yPUEI7ceAbsL3Al6JeSI3wDP95DLlz_A3f-t1o281DU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDQzMTkw/OTkuanBn);
+        background-size: cover;
+        height: 70%;
+    }
+    .destination-cards .card:nth-child(24):hover div {
+        background-image: none;
+    }
+    .destination-cards .card:nth-child(24):hover div::after {
+        content: 'Khajuraho, Kanha National Park, Bandhavgarh, Sanchi, Pachmarhi';
+    }
+    .destination-cards .card:nth-child(25) div {
+        background-image: url(https://media.istockphoto.com/id/1281931838/photo/the-mysore-palace-at-night-in-mysore-in-southern-india.jpg?s=612x612&w=0&k=20&c=ylyE9VYrc008JnHKdXKDxbJx-_I2U8-oQFJDzwJk9Pw=);
+        background-size: cover;
+        height: 70%;
+    }
+    .destination-cards .card:nth-child(25):hover div {
+        background-image: none;
+    }
+    .destination-cards .card:nth-child(25):hover div::after {
+        content: 'Coorg, Hampi, Mysore, Gokarna, Jog Falls';
+    }
+    .destination-cards .card:nth-child(26) div {
+        background-image: url(https://media.istockphoto.com/id/1325410596/photo/swami-vivekananda-memorial-at-sunrise-located-at-ranchi-jharkhand-tourism.jpg?s=612x612&w=0&k=20&c=R4NW7dSlvMzvShXlG1zz3VMrrcSPfxIzwuXu6BuQWuA=);
+        background-size: cover;
+        height: 70%;
+    }
+    .destination-cards .card:nth-child(26):hover div {
+        background-image: none;
+    }
+    .destination-cards .card:nth-child(26):hover div::after {
+        content: 'Betla National Park, Ranchi, Deoghar, Hundru Falls, Netarhat';
+    }
+    .destination-cards .card:nth-child(27) div {
+        background-image: url(https://media.istockphoto.com/id/1248245938/photo/rann-festival-in-india.jpg?s=612x612&w=0&k=20&c=poKruB4X9IOXelYf9HFQZYFbndlzGoJGSkyOGortspA=);
+        background-size: cover;
+        height: 70%;
+    }
+    .destination-cards .card:nth-child(27):hover div {
+        background-image: none;
+    }
+    .destination-cards .card:nth-child(27):hover div::after {
+        content: 'Gir National Park, Somnath, Rann of Kutch, Dwarka, Sabarmati Ashram';
+    }
+    .destination-cards .card:nth-child(28) div {
+        background-image: url(https://specialplacesofindia.com/wp-content/uploads/2024/03/Untitled-design-2024-06-07T172505.632.jpg);
+        background-size: cover;
+        height: 70%;
+    }
+    .destination-cards .card:nth-child(28):hover div {
+        background-image: none;
+    }
+    .destination-cards .card:nth-child(28):hover div::after {
+        content: 'Chitrakote Waterfalls, Kanger Valley National Park, Bastar, Bhoramdeo Temple, Sirpur';
+    }
+    .destination-cards .card:nth-child(29) div {
+        background-image: url(https://t3.ftcdn.net/jpg/03/30/80/74/240_F_330807444_XS6VD5qHDI8kp7ocFhHE2AHS4vXyd6K0.jpg);
+        background-size: cover;
+        height: 70%;
+
+    }
+    .destination-cards .card:nth-child(29):hover div {
+        background-image: none;
+    }
+    .destination-cards .card:nth-child(29):hover div::after {
+        content: 'Bodh Gaya, Nalanda, Rajgir, Patna Sahib, Vaishali';
+    }
+    .destination-cards .card:nth-child(30) div {
+        background-image: url(https://media.istockphoto.com/id/910430170/photo/tawang-arunachal-pradesh.jpg?s=612x612&w=0&k=20&c=MKKYsHH_6JRMYROO2bHIsQAW9XoSnl-9nkRGOFgAg0M=);
+        background-size: cover;
+        height: 70%;
+    }
+    .destination-cards .card:nth-child(30):hover div {
+        background-image: none;
+    }
+    .destination-cards .card:nth-child(30):hover div::after {
+        content: 'Tirupati, Araku Valley, Srisailam, Visakhapatnam, Lepakshi';
+    }
+    .destination-cards .card:nth-child(31) div {
+        background-image: url(https://media.istockphoto.com/id/1320580821/photo/beached-ship-at-sunrise.jpg?s=612x612&w=0&k=20&c=CKe7cc0cnR9Z5X-oBI0ex6V5lCRXyEpQM3wQvjclG60=);
+        background-size: cover;
+        height: 70%;
+    }
+    .destination-cards .card:nth-child(31):hover div {
+        background-image: none;
+    }
+    .destination-cards .card:nth-child(31):hover div::after {
+        content: 'Tawang, Ziro Valley, Namdapha National Park, Bomdila, Roing';
+    }
+    .destination-cards .card:nth-child(32) div {
+        background-image: url(https://media.istockphoto.com/id/185101027/photo/famous-landmark-india-gate-new-dehli.jpg?s=612x612&w=0&k=20&c=v-sxtuM-u1a1QtX0JvDuL3kJf0qeTr41oySAQKnHG2k=);
+        background-size: cover;
+        height: 70%;
+    }
+    .destination-cards .card:nth-child(32):hover div {
+        background-image: none;
+    }
+    .destination-cards .card:nth-child(32):hover div::after {
+        content: ' Red Fort, India Gate, Qutub Minar, Lotus Temple, Akshardham Temple';
+    }
+
+
+    .destination-cards .card:nth-child(33) div {
+        background-image: url(https://t4.ftcdn.net/jpg/02/74/12/51/240_F_274125189_BXHIWXgd3dR7Pm5NPTywrAWx4QTxcyIe.jpg);
+        background-size: cover;
+        height: 70%;
+    }
+    .destination-cards .card:nth-child(33):hover div {
+        background-image: none;
+    }
+    .destination-cards .card:nth-child(33):hover div::after {
+        content: 'Rock Garden, Sukhna Lake, Rose Garden, Capitol Complex, Elante Mall';
+    }
+
+    .destination-cards .card:nth-child(34) div {
+        background-image: url(https://s3.india.com/travel/wp-content/uploads/2016/06/Ladakh-3-shutterstock_291973781.jpg);
+        background-size: cover;
+        height: 70%;
+    }
+    .destination-cards .card:nth-child(34):hover div {
+        background-image: none;
+    }
+    .destination-cards .card:nth-child(34):hover div::after {
+        content: ' Leh, Pangong Lake, Nubra Valley, Tso Moriri, Zanskar Valley';
+    }
+
+
+    .destination-cards .card:nth-child(35) div {
+        background-image: url(https://t3.ftcdn.net/jpg/02/92/09/42/240_F_292094276_fBEov3zG5srIdf8hHP7z94snMFxbbSG7.jpg);
+        background-size: cover;
+        height: 70%;
+    }
+    .destination-cards .card:nth-child(35):hover div {
+        background-image: none;
+    }
+    .destination-cards .card:nth-child(35):hover div::after {
+        content: 'Agatti, Minicoy, Kavaratti, Bangaram, Kadmat';
+    }
+
+
+    .destination-cards .card:nth-child(36) div {
+        background-image: url(https://t3.ftcdn.net/jpg/06/26/47/00/240_F_626470068_WxWRwyKzCoKrgpBomqscC6UyPznu8XvY.jpg);
+        background-size: cover;
+        height: 70%;
+    }
+    .destination-cards .card:nth-child(36):hover div {
+        background-image: none;
+    }
+    .destination-cards .card:nth-child(36):hover div::after {
+        content: 'Auroville, Promenade Beach, Paradise Beach, Aurobindo Ashram, Mahé';
+    }
+
+
+    .destination-cards .card:nth-child(37) div {
+        background-image: url(https://t4.ftcdn.net/jpg/09/04/26/55/240_F_904265556_m8ZdwQmOGNmf7VM2c3t638BO61la2rRq.jpg);
+        background-size: cover;
+        height: 70%;
+    }
+    .destination-cards .card:nth-child(37):hover div {
+        background-image: none;
+    }
+    .destination-cards .card:nth-child(37):hover div::after {
+        content: 'Port Blair, Havelock Island, Neil Island, Ross Island, Cellular Jail';
+    }
+
+
+    .destination-cards .card:nth-child(38) div {
+        background-image: url(https://t4.ftcdn.net/jpg/06/75/89/41/240_F_675894117_QN9wK9bbxJ9nxkOkz0ACmVzeDfCStFRa.jpg);
+        background-size: cover;
+        height: 70%;
+    }
+    .destination-cards .card:nth-child(38):hover div {
+        background-image: none;
+    }
+    .destination-cards .card:nth-child(38):hover div::after {
+        content: 'Raghunath Temple, Bahu Fort, Mubarak Mandi Palace, Amar Mahal Palace, Vaishno Devi Temple, Ranbireshwar Temple, Mansar Lake, Nandini Wildlife Sanctuary, Surinsar Lake, and Bagh-e-Bahu Garden';
+    }
+
+    .destination-cards .card:nth-child(39) div {
+        background-image: url(https://images.unsplash.com/photo-1598997392759-c3bb7491e0b3?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+        background-size: cover;
+        height: 70%;
+    }
+    .destination-cards .card:nth-child(39):hover div {
+        background-image: none;
+    }
+    .destination-cards .card:nth-child(39):hover div::after {
+        content: 'Diu Fort, Jampore Beach, Silvassa, St. Pauls church';
+    }
+
+
+
+    .backButton{
+        height: 2rem;
+        width: 4rem;
+        position: absolute;
+        left: 1rem ;
+        background-color: white;
+        border: none;
+        font-weight: 600;
+        transition: all linear 0.3s;
+    }
+    .backButton:hover{
+        background-color: black;
+        color: white;
+    }
+
+    </style>
+    </head>
+    <body>
+        <button onclick="history.back()" class="backButton">Back</button>
+        <section id="destinations" class="destinations">
+            <h1>Featured Destinations</h1>
+            <div class="destination-cards">
+                <div class="card">
+                    <div>
+                    </div>
+                    <h4>Taj Mahal</h4>
+                    <p>Symbol of Eternal love</p>
+                </div>
+                <div class="card">
+                    <div>
+
+                    </div>
+                    <h4>Red Fort  </h4>
+                    <p> Embrace the Royalty</p>
+                </div>
+                <div class="card">
+                <div>
+
+                </div>
+                    <h4>Hawa Mahal</h4>
+                    <p>Whispers of winds in stone.</p>
+                </div>
+                <div class="card">
+                    <div>
+
+                    </div>
+                    <h4>Kerala </h4>
+                    <p>Experience the lush greenery and tranquil backwaters of Kerala.</p>
+                </div>
+                <div class="card">
+                    <div>
+
+                    </div>
+                    <h4>Rajasthan</h4>
+                    <p>Explore the palaces and desert landscapes of Rajasthan.</p>
+                </div>
+                <div class="card">
+                    <div>
+
+                    </div>
+                    <h4>Himachal Pradesh  </h4>
+                    <p>Discover the hills of heaven</p>
+                </div>
+                <div class="card">
+                    <div>
+
+                    </div>
+                    <h4>Assam  </h4>
+                    <p>Tea gardens and tranquil rivers await</p>
+                </div>
+                <div class="card">
+                    <div>
+
+                    </div>
+                    <h4>Goa  </h4>
+                    <p>Sun, sand, and serene beaches</p>
+                </div>
+                <div class="card">
+                    <div>
+
+                    </div>
+                    <h4>Punjab  </h4>
+                    <p>Warm hearts, golden harvests</p>
+                </div>
+                <div class="card">
+                    <div></div>
+                    <h4>Uttarakhand  </h4>
+                    <p>Gateway to the Himalayas' soul</p>
+                </div>
+                <div class="card">
+                    <div>
+
+                    </div>
+                    <h4>West Bengal  </h4>
+                    <p>Art, culture, and the City of Joy</p>
+                </div>
+                <div class="card">
+                    <div>
+
+                    </div>
+                    <h4>Tripura  </h4>
+                    <p>Untouched beauty, vibrant culture</p>
+                </div>
+                <div class="card">
+                    <div></div>
+                    <h4>Utter Pradesh  </h4>
+                    <p>A spiritual journey through history</p>
+                </div>
+                <div class="card">
+                    <div></div>
+                    <h4>Telangana  </h4>
+                    <p>A fusion of heritage and innovation</p>
+                </div>
+                <div class="card">
+                    <div></div>
+                    <h4>Tamil Nadu  </h4>
+                    <p>Where tradition and temples unite</p>
+                </div>
+                <div class="card">
+                    <div></div>
+                    <h4>Sikkim  </h4>
+                    <p>A peaceful paradise in the Himalayas</p>
+                </div>
+                <div class="card">
+                    <div></div>
+                    <h4>Odisha  </h4>
+                    <p>Golden sands, ancient temples</p>
+                </div>
+                <div class="card">
+                    <div></div>
+                    <h4>Mizoram  </h4>
+                    <p>The hills call, serenity answers</p>
+                </div>
+                <div class="card">
+                    <div></div>
+                    <h4>Haryana  </h4>
+                    <p>Step into the land of legends</p>
+                </div>
+                <div class="card">
+                    <div></div>
+                    <h4>Nagaland  </h4>
+                    <p>Untold stories of the warrior land</p>
+                </div>
+                <div class="card">
+                    <div></div>
+                    <h4>Meghalaya  </h4>
+                    <p>Land of clouds, endless wonder</p>
+                </div>
+                <div class="card">
+                    <div></div>
+                    <h4>Manipur  </h4>
+                    <p>Jewel of India, crafted by nature</p>
+                </div>
+                <div class="card">
+                    <div>
+
+                    </div>
+                    <h4>Maharastra  </h4>
+                    <p>Where culture dances with coastlines</p>
+                </div>
+                <div class="card">
+                    <div>
+
+                    </div>
+                    <h4>Madhya Pradesh  </h4>
+                    <p>The heart of India beats wild</p>
+                </div>
+                <div class="card">
+                    <div>
+
+                    </div>
+                    <h4>Karnataka  </h4>
+                    <p>Heritage meets modernity in the South</p>
+                </div>
+                <div class="card">
+                    <div>
+
+                    </div>
+                    <h4>Jharkhand  </h4>
+                    <p>Forests, waterfalls, and untamed beauty</p>
+                </div>
+                
+                <div class="card">
+                    <div>
+
+                    </div>
+                    <h4>Gujarat  </h4>
+                    <p>Vibrant traditions, timeless treasures</p>
+                </div>
+                <div class="card">
+                    <div>
+
+                    </div>
+                    <h4>Chhattisgarh </h4>
+                    <p>Explore the heart of tribal culture</p>
+                </div>
+                <div class="card">
+                    <div>
+
+                    </div>
+                    <h4>Bihar  </h4>
+                    <p>Journey through history and heritage</p>
+                </div>
+                <div class="card">
+                    <div>
+
+                    </div>
+                    <h4>Andhra Pradesh  </h4>
+                    <p>Unveil the charm of coastal temples</p>
+                </div>
+                <div class="card">
+                    <div>
+
+                    </div>
+                    <h4>Arunachal Pradesh  </h4>
+                    <p>Where nature whispers serenity</p>
+                </div>
+                <div class="card">
+                    <div></div>
+                    <h4>Delhi  </h4>
+                    <p>A timeless tale of empires</p>
+                </div>
+                <div class="card">
+                    <div></div>
+                    <h4>Chandigarh  </h4>
+                    <p>A city where nature meets modernity</p>
+                </div>
+                <div class="card">
+                    <div></div>
+                    <h4>Ladakh  </h4>
+                    <p>Barren beauty, an adventure in the sky</p>
+                </div>
+                <div class="card">
+                    <div></div>
+                    <h4>Lakshadweep  </h4>
+                    <p>Isolated islands, oceanic paradise</p>
+                </div>
+                <div class="card">
+                    <div></div>
+                    <h4>Puducherry</h4>
+                    <p>French charm, Indian soul</p>
+                </div>
+                <div class="card">
+                    <div></div>
+                    <h4>Andaman & Nicobar Islands</h4>
+                    <p>Pristine beaches, untold underwater wonders</p>
+                </div>
+                <div class="card">
+                    <div></div>
+                    <h4>Jammu & Kashmir</h4>
+                    <p>Heaven on Earth, snow-clad serenity</p>
+                </div>
+                <div class="card">
+                    <div></div>
+                    <h4>Dadra & Nagar Haveli</h4>
+                    <p>Heritage coastlines, a tranquil retreat</p>
+                </div>
+                
+            </div>
+        </section>
+
+    </body>
+    </html>
